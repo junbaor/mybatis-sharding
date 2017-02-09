@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.junbaor.sharding.dao.OrdersMapper">
+    <select id="getSubQuery" resultType="java.util.Map">
+        SELECT * FROM users as u
+          LEFT JOIN orders as o
+            ON u.id= o.id
+          INNER JOIN users as s
+            ON s.id = u.id
+    </select>
+</mapper>
