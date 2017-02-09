@@ -37,7 +37,7 @@ ordersMapper.selectByPrimaryKey(1);   //DB 查询操作
 ```
 ### 配置项
 `dbType` 配置暂时不生效
-拦截器中可通过 `ignoreTable` 设置忽略的表名, SQL 发现有忽略的表名将不进行改写. 
+拦截器中可通过 `ignoreTable` 设置忽略的表名, 多个使用 `,` 分隔, SQL 发现有忽略的表名将不进行改写. 
     
 ### 注意事项
 - 不允许出现列名和表名一致的情况 
