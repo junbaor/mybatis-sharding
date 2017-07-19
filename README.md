@@ -1,4 +1,6 @@
 # mybatis-sharding
+> 初步想法, 发现 https://github.com/dangdangdotcom/sharding-jdbc 后放弃本项目
+
 ### 简介
 一个简单的分表插件, 通过 mybatis 拦截器对原 SQL 进行改写.
 利用 druid 数据源中的 sql 解析模块识别表名加后缀, 支持增、删、改、关联查询、子查询等其他常见操作.
@@ -36,7 +38,7 @@ ordersMapper.selectByPrimaryKey(1);   //DB 查询操作
 </bean>
 ```
 ### 配置项
-`dbType` 配置暂时不生效
+`dbType` 配置暂时不生效  
 拦截器中可通过 `ignoreTable` 设置忽略的表名, 多个使用 `,` 分隔, SQL 发现有忽略的表名将不进行改写. 
     
 ### 注意事项
